@@ -6,7 +6,7 @@ let numOfConnection = 0;
 app.use("/res/", express.static("./public/"));
 
 app.get("/", (req, res) => {
-    console.log(typeof express.static("./public"));
+    // console.log(typeof express.static("./public"));
     console.log("inbound connection detected");
     numOfConnection++;
     res.send(`Hello World !!</br>
