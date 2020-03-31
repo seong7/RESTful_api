@@ -1,20 +1,18 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
-let numOfConnection = 0;
 
 app.use("/res/", express.static("./public/"));
 
 app.get("/", (req, res) => {
-    // console.log(typeof express.static("./public"));
-    console.log("inbound connection detected");
-    numOfConnection++;
-    res.send(`Hello World !!</br>
-    port : ${port}</br>
-    <strong>${numOfConnection}th</strong> connection`);
-})
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
+    res.send("Hello World");
+    // res.send(res.header);
+});
 
+const port = 3000;
 app.listen(port, () => {
-    console.log(`application is listening on port ${port}...`);
-}) 
+    console.log(`Application is listening on port ${port}...`);
+});
