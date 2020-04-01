@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<header>
+</header>
+<style type="text/css">
+    body{
+        display: flex;
+
+    }
+    .login{
+        margin: 10%;
+    }
+    div{
+        margin: 2rem;
+    }
+    .btn{
+        width: 10rem;
+        height: 3rem;
+    }
+    strong{
+        color: red;
+    }
+</style>
+<body>
+    <div class="login get">
+        <!-- <form action="/get/test/" method="get" enctype="application/x-www-form-urlencoded"> -->
+        <!-- <form action="/get/test/" method="get" enctype="multipart/form-data"> -->
+        <!-- <form action="/get/test/" method="get" enctype="application/json"> -->
+        <!-- <form action="/get/test/" method="get" enctype="text/plain"> -->
+        <form action="/get/test/" method="get">
+            <div>
+                <p><strong>GET</strong> 방식 연습</p>
+            </div>
+            <div class="id">
+                <p>ID : </p>
+                <input name="id" type="text" value="aa"/>
+            </div>
+            <div class="pwd">
+                <p>PWD :</p>
+                <input name="pwd" type="text" value="123"/>
+            </div>
+            <div>
+                <input class="btn" type="submit"/>
+            </div>
+        </form>
+    </div>
+    <div class="login post">
+        <!-- <form action="/post/test/" method="post" enctype="application/x-www-form-urlencoded"> -->
+        <!-- <form action="/post/test/" method="post" enctype="multipart/form-data"> -->
+        <form action="/post/test/?c=3&d=4" method="post" enctype="application/json">
+        <!-- <form action="/post/test/" method="post" enctype="text/plain"> -->
+            <div>
+                <p><strong>POST</strong> 방식 연습</p>
+            </div>
+            <div class="id">
+                <p>ID : </p>
+                <input name="id" type="text" value="aa"/>
+            </div>
+            <div class="pwd">
+                <p>PWD :</p>
+                <input name="pwd" type="text" value="123"/>
+            </div>
+            <div>
+                <input class="btn" type="submit"/>
+            </div>
+        </form>
+    </div>
+</body>
