@@ -13,7 +13,7 @@ let numOfConnection = 0;
 
  // use : get post put delete 를 모두 포함(어떤 접속이든 받을 수 있음)
 app.use(bodyParser.urlencoded({ extended: false }));    // x-www-form-urlencoded type 의 request body 대한 parsing
-                                                        // 형태는 get 의 query string 와 비슷 (id=seongjinkim21&name=SeongjinKim)
+                                                        // 형태는 get 의 query string 과 비슷 (id=seongjinkim21&name=SeongjinKim)
                                                         // HTML form method="post" 로 보낼 때 
 app.use(bodyParser.json()); // application/json type 의 request body 대한 parsing
 
